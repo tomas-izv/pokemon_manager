@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokémon Manager</title>
+    <style>
+        h1 {
+            font-size: 5rem;
+        }
+        ul {
+            font-size: 3rem;
+        }
+        li {
+            font-size: 2rem;
+        } 
+        button {
+            font-size: 1.5rem;
+        }
+        a {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Pokémon List</h1>
+    <ul>
+        <% pokemons.forEach(pokemon => { %>
+            <li>
+                <strong><%= pokemon.name %></strong> (Level: <%= pokemon.level %>, Type: <%= pokemon.type %>)
+                <a href="/edit/<%= pokemon.id %>">Edit</a>
+                <form action="/delete/<%= pokemon.id %>" method="POST" style="display:inline;">
+                    <button type="submit">Delete</button>
+                </form>
+            </li>
+        <% }) %>
+    </ul>
+    <a href="/new">Add New Pokémon</a>
+</body>
+</html>
+

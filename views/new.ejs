@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Pokémon</title>
+    <style>
+        h1 {
+            font-size: 5rem;
+        }
+        label {
+            font-size: 3rem;
+        }
+        input {
+            font-size: 3rem;
+        }
+        button {
+            font-size: 2rem;
+        }
+        a {
+            font-size: 1.5rem;
+        }
+    </style>
+</head>
+<body>
+    <h1>Add a New Pokémon</h1>
+    <form action="/add" method="POST">
+        <label for="name">Name:</label>
+        <input type="text" name="name" id="name" required>
+        <br>
+        <br>
+        <label for="level">Level:</label>
+        <input type="number" name="level" id="level" required>
+        <br>
+        <br>
+        <label for="type">Type:</label>
+        <input type="text" name="type" id="type" required>
+        <br>
+        <br>
+        <button type="submit">Add Pokémon</button>
+        <br>
+        <br>
+    </form>
+    <a href="/">Back to Pokémon List</a>
+</body>
+</html>
